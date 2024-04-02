@@ -1,0 +1,667 @@
+cat /proc/cpuinfo|grep -m1 -i "model name"
+model name      : Intel(R) Core(TM) i7-4700HQ CPU @ 2.40GHz
+
+~
+❯ uname -a
+Linux cachyos 6.8.2-1-cachyos-sched-ext-lto #1 SMP PREEMPT_DYNAMIC Wed, 27 Mar 2024 21:46:48 +0000 x86_64 GNU/Linux
+no scx_scheduler started !!!
+
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2791] setting to a 10 secs run per stressor
+stress-ng: info:  [2791] dispatching hogs: 8 cpu
+stress-ng: metrc: [2791] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2791]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2791] cpu               62287     10.00     79.43      0.02      6231.28         783.95
+stress-ng: info:  [2791] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2791] skipped: 0
+stress-ng: info:  [2791] passed: 8: cpu (8)
+stress-ng: info:  [2791] failed: 0
+stress-ng: info:  [2791] metrics untrustworthy: 0
+stress-ng: info:  [2791] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2844] setting to a 10 secs run per stressor
+stress-ng: info:  [2844] dispatching hogs: 8 cpu
+stress-ng: metrc: [2844] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2844]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2844] cpu               59233     10.00     78.44      0.04      5921.64         754.75
+stress-ng: info:  [2844] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2844] skipped: 0
+stress-ng: info:  [2844] passed: 8: cpu (8)
+stress-ng: info:  [2844] failed: 0
+stress-ng: info:  [2844] metrics untrustworthy: 0
+stress-ng: info:  [2844] successful run completed in 10,01 secs
+⏎
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2919] setting to a 10 secs run per stressor
+stress-ng: info:  [2919] dispatching hogs: 8 cpu
+stress-ng: metrc: [2919] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2919]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2919] cpu               59043      9.99     78.98      0.03      5907.42         747.34
+stress-ng: info:  [2919] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2919] skipped: 0
+stress-ng: info:  [2919] passed: 8: cpu (8)
+stress-ng: info:  [2919] failed: 0
+stress-ng: info:  [2919] metrics untrustworthy: 0
+stress-ng: info:  [2919] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2956] setting to a 10 secs run per stressor
+stress-ng: info:  [2956] dispatching hogs: 8 cpu
+stress-ng: metrc: [2956] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2956]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2956] cpu               60333     10.00     78.91      0.04      6034.62         764.19
+stress-ng: info:  [2956] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2956] skipped: 0
+stress-ng: info:  [2956] passed: 8: cpu (8)
+stress-ng: info:  [2956] failed: 0
+stress-ng: info:  [2956] metrics untrustworthy: 0
+stress-ng: info:  [2956] successful run completed in 10,01 secs
+
+~ 10s
+❯
+
+
+
+
+
+
+stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [27074] setting to a 10 secs run per stressor
+stress-ng: info:  [27074] dispatching hogs: 2 sem
+stress-ng: metrc: [27074] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27074]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27074] sem            65147403     10.00     16.54     23.42   6514956.60     1630380.55
+stress-ng: info:  [27074] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [27074] skipped: 0
+stress-ng: info:  [27074] passed: 2: sem (2)
+stress-ng: info:  [27074] failed: 0
+stress-ng: info:  [27074] metrics untrustworthy: 0
+stress-ng: info:  [27074] successful run completed in 10,00 secs
+
+~ 10s
+❯ stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [27126] setting to a 10 secs run per stressor
+stress-ng: info:  [27126] dispatching hogs: 2 sem
+stress-ng: metrc: [27126] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27126]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27126] sem            64194657     10.00     16.34     23.61   6419737.30     1606590.94
+stress-ng: info:  [27126] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [27126] skipped: 0
+stress-ng: info:  [27126] passed: 2: sem (2)
+stress-ng: info:  [27126] failed: 0
+stress-ng: info:  [27126] metrics untrustworthy: 0
+stress-ng: info:  [27126] successful run completed in 10,00 secs
+
+~ 10s
+❯ stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [27175] setting to a 10 secs run per stressor
+stress-ng: info:  [27175] dispatching hogs: 2 sem
+stress-ng: metrc: [27175] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27175]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27175] sem            55213772     10.00     14.02     25.93   5521599.35     1382335.07
+stress-ng: info:  [27175] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [27175] skipped: 0
+stress-ng: info:  [27175] passed: 2: sem (2)
+stress-ng: info:  [27175] failed: 0
+stress-ng: info:  [27175] metrics untrustworthy: 0
+stress-ng: info:  [27175] successful run completed in 10,00 secs
+
+stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [27539] setting to a 10 secs run per stressor
+stress-ng: info:  [27539] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [27540] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [27539] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27539]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27539] io               268190     10.00      0.91     17.70     26820.25       14412.59
+stress-ng: metrc: [27539] vm               307200     15.11      0.00      0.11     20334.67     2812645.92
+stress-ng: info:  [27539] skipped: 0
+stress-ng: info:  [27539] passed: 3: io (2) vm (1)
+stress-ng: info:  [27539] failed: 0
+stress-ng: info:  [27539] metrics untrustworthy: 0
+stress-ng: info:  [27539] successful run completed in 15.11 secs
+
+~ 15s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [27576] setting to a 10 secs run per stressor
+stress-ng: info:  [27576] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [27578] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [27576] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27576]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27576] io               309254     10.00      1.31     17.46     30926.97       16479.05
+stress-ng: metrc: [27576] vm               329390     10.05      9.08      0.93     32770.58       32924.98
+stress-ng: info:  [27576] skipped: 0
+stress-ng: info:  [27576] passed: 3: io (2) vm (1)
+stress-ng: info:  [27576] failed: 0
+stress-ng: info:  [27576] metrics untrustworthy: 0
+stress-ng: info:  [27576] successful run completed in 10.06 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [27605] setting to a 10 secs run per stressor
+stress-ng: info:  [27605] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [27607] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [27605] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27605]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27605] io               262064     10.00      0.84     17.94     26207.43       13952.60
+stress-ng: metrc: [27605] vm               311168     10.07      8.31      1.71     30899.86       31060.30
+stress-ng: info:  [27605] skipped: 0
+stress-ng: info:  [27605] passed: 3: io (2) vm (1)
+stress-ng: info:  [27605] failed: 0
+stress-ng: info:  [27605] metrics untrustworthy: 0
+stress-ng: info:  [27605] successful run completed in 10.08 secs
+
+
+ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [27754] setting to a 10 secs run per stressor
+stress-ng: info:  [27754] dispatching hogs: 50 io-uring
+stress-ng: metrc: [27754] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [27754]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [27754] io-uring        2214924     10.44      0.89     60.94    212231.93       35822.06
+stress-ng: info:  [27754] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [27754] skipped: 0
+stress-ng: info:  [27754] passed: 50: io-uring (50)
+stress-ng: info:  [27754] failed: 0
+stress-ng: info:  [27754] metrics untrustworthy: 0
+stress-ng: info:  [27754] successful run completed in 15,06 secs
+
+~ 15s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [28693] setting to a 10 secs run per stressor
+stress-ng: info:  [28693] dispatching hogs: 50 io-uring
+stress-ng: metrc: [28693] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [28693]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [28693] io-uring        2370300     10.26      0.98     66.01    230963.03       35385.05
+stress-ng: info:  [28693] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [28693] skipped: 0
+stress-ng: info:  [28693] passed: 50: io-uring (50)
+stress-ng: info:  [28693] failed: 0
+stress-ng: info:  [28693] metrics untrustworthy: 0
+stress-ng: info:  [28693] successful run completed in 10,45 secs
+
+~ 10s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [29636] setting to a 10 secs run per stressor
+stress-ng: info:  [29636] dispatching hogs: 50 io-uring
+stress-ng: metrc: [29636] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [29636]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [29636] io-uring        2357020     10.36      0.94     64.73    227435.75       35892.44
+stress-ng: info:  [29636] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [29636] skipped: 0
+stress-ng: info:  [29636] passed: 50: io-uring (50)
+stress-ng: info:  [29636] failed: 0
+stress-ng: info:  [29636] metrics untrustworthy: 0
+stress-ng: info:  [29636] successful run completed in 15,05 secs
+
+~ 15s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [30596] setting to a 10 secs run per stressor
+stress-ng: info:  [30596] dispatching hogs: 50 io-uring
+stress-ng: metrc: [30596] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [30596]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [30596] io-uring        2371420     10.51      0.92     59.93    225724.27       38970.53
+stress-ng: info:  [30596] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [30596] skipped: 0
+stress-ng: info:  [30596] passed: 50: io-uring (50)
+stress-ng: info:  [30596] failed: 0
+stress-ng: info:  [30596] metrics untrustworthy: 0
+stress-ng: info:  [30596] successful run completed in 15,02 secs
+
+~ 15s
+❯
+
+
+stress-ng --cpu 8 -t 10 --perf --metrics-brief
+#################################################################################################################################################################
+
+
+uname -a
+Linux cachyos 6.8.2-1-cachyos-bore-lto #1 SMP PREEMPT_DYNAMIC Wed, 27 Mar 2024 23:33:50 +0000 x86_64 GNU/Linux
+
+
+
+
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2799] setting to a 10 secs run per stressor
+stress-ng: info:  [2799] dispatching hogs: 8 cpu
+stress-ng: metrc: [2799] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2799]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2799] cpu               60831     10.00     77.35      0.08      6084.90         785.58
+stress-ng: info:  [2799] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2799] skipped: 0
+stress-ng: info:  [2799] passed: 8: cpu (8)
+stress-ng: info:  [2799] failed: 0
+stress-ng: info:  [2799] metrics untrustworthy: 0
+stress-ng: info:  [2799] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2840] setting to a 10 secs run per stressor
+stress-ng: info:  [2840] dispatching hogs: 8 cpu
+stress-ng: metrc: [2840] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2840]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2840] cpu               59266     10.00     77.82      0.06      5926.73         761.08
+stress-ng: info:  [2840] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2840] skipped: 0
+stress-ng: info:  [2840] passed: 8: cpu (8)
+stress-ng: info:  [2840] failed: 0
+stress-ng: info:  [2840] metrics untrustworthy: 0
+stress-ng: info:  [2840] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2885] setting to a 10 secs run per stressor
+stress-ng: info:  [2885] dispatching hogs: 8 cpu
+stress-ng: metrc: [2885] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2885]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2885] cpu               59460      9.99     77.69      0.05      5949.82         764.84
+stress-ng: info:  [2885] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2885] skipped: 0
+stress-ng: info:  [2885] passed: 8: cpu (8)
+stress-ng: info:  [2885] failed: 0
+stress-ng: info:  [2885] metrics untrustworthy: 0
+stress-ng: info:  [2885] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2929] setting to a 10 secs run per stressor
+stress-ng: info:  [2929] dispatching hogs: 8 cpu
+stress-ng: metrc: [2929] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2929]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2929] cpu               59354     10.00     77.15      0.07      5937.54         768.59
+stress-ng: info:  [2929] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2929] skipped: 0
+stress-ng: info:  [2929] passed: 8: cpu (8)
+stress-ng: info:  [2929] failed: 0
+stress-ng: info:  [2929] metrics untrustworthy: 0
+stress-ng: info:  [2929] successful run completed in 10,01 secs
+
+~ 10s
+❯
+
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3110] setting to a 10 secs run per stressor
+stress-ng: info:  [3110] dispatching hogs: 2 sem
+stress-ng: metrc: [3110] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3110]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3110] sem            44401639     10.00     11.21     28.76   4440351.18     1111029.21
+stress-ng: info:  [3110] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3110] skipped: 0
+stress-ng: info:  [3110] passed: 2: sem (2)
+stress-ng: info:  [3110] failed: 0
+stress-ng: info:  [3110] metrics untrustworthy: 0
+stress-ng: info:  [3110] successful run completed in 10,00 secs
+
+~
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3150] setting to a 10 secs run per stressor
+stress-ng: info:  [3150] dispatching hogs: 2 sem
+stress-ng: metrc: [3150] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3150]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3150] sem            52384090     10.00     13.55     26.40   5238663.86     1311223.55
+stress-ng: info:  [3150] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3150] skipped: 0
+stress-ng: info:  [3150] passed: 2: sem (2)
+stress-ng: info:  [3150] failed: 0
+stress-ng: info:  [3150] metrics untrustworthy: 0
+stress-ng: info:  [3150] successful run completed in 10,00 secs
+
+~
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3183] setting to a 10 secs run per stressor
+stress-ng: info:  [3183] dispatching hogs: 2 sem
+stress-ng: metrc: [3183] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3183]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3183] sem            52170329     10.00     13.65     26.31   5217281.68     1305686.68
+stress-ng: info:  [3183] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3183] skipped: 0
+stress-ng: info:  [3183] passed: 2: sem (2)
+stress-ng: info:  [3183] failed: 0
+stress-ng: info:  [3183] metrics untrustworthy: 0
+stress-ng: info:  [3183] successful run completed in 10,00 secs
+
+
+
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3291] setting to a 10 secs run per stressor
+stress-ng: info:  [3291] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3292] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3291] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3291]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3291] io               291664     10.00      0.79     17.86     29167.59       15641.78
+stress-ng: metrc: [3291] vm               323229     10.05      9.18      0.86     32171.20       32198.28
+stress-ng: info:  [3291] skipped: 0
+stress-ng: info:  [3291] passed: 3: io (2) vm (1)
+stress-ng: info:  [3291] failed: 0
+stress-ng: info:  [3291] metrics untrustworthy: 0
+stress-ng: info:  [3291] successful run completed in 10.05 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3331] setting to a 10 secs run per stressor
+stress-ng: info:  [3331] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3333] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3331] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3331]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3331] io               255739     10.00      0.80     17.63     25578.63       13880.09
+stress-ng: metrc: [3331] vm               308515     10.00      8.24      1.74     30849.35       30910.29
+stress-ng: info:  [3331] skipped: 0
+stress-ng: info:  [3331] passed: 3: io (2) vm (1)
+stress-ng: info:  [3331] failed: 0
+stress-ng: info:  [3331] metrics untrustworthy: 0
+stress-ng: info:  [3331] successful run completed in 10.00 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3366] setting to a 10 secs run per stressor
+stress-ng: info:  [3366] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3368] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3366] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3366]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3366] io               254190     10.00      0.86     17.94     25419.77       13518.20
+stress-ng: metrc: [3366] vm               328551     10.00      9.03      0.93     32850.93       33009.54
+stress-ng: info:  [3366] skipped: 0
+stress-ng: info:  [3366] passed: 3: io (2) vm (1)
+stress-ng: info:  [3366] failed: 0
+stress-ng: info:  [3366] metrics untrustworthy: 0
+stress-ng: info:  [3366] successful run completed in 10.01 secs
+
+~ 10s
+
+
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [3508] setting to a 10 secs run per stressor
+stress-ng: info:  [3508] dispatching hogs: 50 io-uring
+stress-ng: metrc: [3508] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3508]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3508] io-uring        3017178     10.65      1.10     63.50    283274.44       46705.95
+stress-ng: info:  [3508] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3508] skipped: 0
+stress-ng: info:  [3508] passed: 50: io-uring (50)
+stress-ng: info:  [3508] failed: 0
+stress-ng: info:  [3508] metrics untrustworthy: 0
+stress-ng: info:  [3508] successful run completed in 15,01 secs
+
+~ 15s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [4461] setting to a 10 secs run per stressor
+stress-ng: info:  [4461] dispatching hogs: 50 io-uring
+stress-ng: metrc: [4461] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [4461]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [4461] io-uring        2876535     10.50      1.04     61.13    273833.65       46262.95
+stress-ng: info:  [4461] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [4461] skipped: 0
+stress-ng: info:  [4461] passed: 50: io-uring (50)
+stress-ng: info:  [4461] failed: 0
+stress-ng: info:  [4461] metrics untrustworthy: 0
+stress-ng: info:  [4461] successful run completed in 10,87 secs
+
+~ 10s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [5400] setting to a 10 secs run per stressor
+stress-ng: info:  [5400] dispatching hogs: 50 io-uring
+stress-ng: metrc: [5400] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [5400]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [5400] io-uring        2857460     10.68      1.00     57.34    267517.82       48978.37
+stress-ng: info:  [5400] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [5400] skipped: 0
+stress-ng: info:  [5400] passed: 50: io-uring (50)
+stress-ng: info:  [5400] failed: 0
+stress-ng: info:  [5400] metrics untrustworthy: 0
+stress-ng: info:  [5400] successful run completed in 15,07 secs
+
+~ 15s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [6501] setting to a 10 secs run per stressor
+stress-ng: info:  [6501] dispatching hogs: 50 io-uring
+stress-ng: metrc: [6501] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [6501]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [6501] io-uring        2896520     10.87      1.08     57.62    266386.75       49342.12
+stress-ng: info:  [6501] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [6501] skipped: 0
+stress-ng: info:  [6501] passed: 50: io-uring (50)
+stress-ng: info:  [6501] failed: 0
+stress-ng: info:  [6501] metrics untrustworthy: 0
+stress-ng: info:  [6501] successful run completed in 15,06 secs
+###############################################################################################################################################################################
+
+~
+❯ uname -a
+Linux cachyos 6.8.2-1-cachyos-echo #1 SMP PREEMPT_DYNAMIC Fri, 29 Mar 2024 19:31:29 +0000 x86_64 GNU/Linux
+
+~
+
+~
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2813] setting to a 10 secs run per stressor
+stress-ng: info:  [2813] dispatching hogs: 8 cpu
+stress-ng: metrc: [2813] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2813]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2813] cpu               69085     10.00     78.02      0.08      6908.17         884.56
+stress-ng: info:  [2813] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2813] skipped: 0
+stress-ng: info:  [2813] passed: 8: cpu (8)
+stress-ng: info:  [2813] failed: 0
+stress-ng: info:  [2813] metrics untrustworthy: 0
+stress-ng: info:  [2813] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2856] setting to a 10 secs run per stressor
+stress-ng: info:  [2856] dispatching hogs: 8 cpu
+stress-ng: metrc: [2856] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2856]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2856] cpu               68747     10.00     78.10      0.07      6877.88         879.39
+stress-ng: info:  [2856] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2856] skipped: 0
+stress-ng: info:  [2856] passed: 8: cpu (8)
+stress-ng: info:  [2856] failed: 0
+stress-ng: info:  [2856] metrics untrustworthy: 0
+stress-ng: info:  [2856] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2896] setting to a 10 secs run per stressor
+stress-ng: info:  [2896] dispatching hogs: 8 cpu
+stress-ng: metrc: [2896] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2896]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2896] cpu               64665     10.00     78.01      0.08      6466.94         828.13
+stress-ng: info:  [2896] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2896] skipped: 0
+stress-ng: info:  [2896] passed: 8: cpu (8)
+stress-ng: info:  [2896] failed: 0
+stress-ng: info:  [2896] metrics untrustworthy: 0
+stress-ng: info:  [2896] successful run completed in 10,01 secs
+
+~ 10s
+❯ stress-ng --cpu 8 -t 10 --perf --metrics-brief
+stress-ng: info:  [2942] setting to a 10 secs run per stressor
+stress-ng: info:  [2942] dispatching hogs: 8 cpu
+stress-ng: metrc: [2942] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [2942]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [2942] cpu               63014     10.00     77.60      0.08      6302.98         811.23
+stress-ng: info:  [2942] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [2942] skipped: 0
+stress-ng: info:  [2942] passed: 8: cpu (8)
+stress-ng: info:  [2942] failed: 0
+stress-ng: info:  [2942] metrics untrustworthy: 0
+stress-ng: info:  [2942] successful run completed in 10,01 secs
+
+~ 10s
+❯
+
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3047] setting to a 10 secs run per stressor
+stress-ng: info:  [3047] dispatching hogs: 2 sem
+stress-ng: metrc: [3047] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3047]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3047] sem            86623769     10.00     16.10     23.89   8663422.36     2166074.17
+stress-ng: info:  [3047] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3047] skipped: 0
+stress-ng: info:  [3047] passed: 2: sem (2)
+stress-ng: info:  [3047] failed: 0
+stress-ng: info:  [3047] metrics untrustworthy: 0
+stress-ng: info:  [3047] successful run completed in 10,00 secs
+
+~ 10s
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3099] setting to a 10 secs run per stressor
+stress-ng: info:  [3099] dispatching hogs: 2 sem
+stress-ng: metrc: [3099] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3099]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3099] sem            79736804     10.00     17.70     22.30   7973962.53     1993578.14
+stress-ng: info:  [3099] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3099] skipped: 0
+stress-ng: info:  [3099] passed: 2: sem (2)
+stress-ng: info:  [3099] failed: 0
+stress-ng: info:  [3099] metrics untrustworthy: 0
+stress-ng: info:  [3099] successful run completed in 10,00 secs
+
+~ 10s
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3143] setting to a 10 secs run per stressor
+stress-ng: info:  [3143] dispatching hogs: 2 sem
+stress-ng: metrc: [3143] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3143]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3143] sem            71500121     10.00     17.63     22.35   7150277.96     1788327.44
+stress-ng: info:  [3143] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3143] skipped: 0
+stress-ng: info:  [3143] passed: 2: sem (2)
+stress-ng: info:  [3143] failed: 0
+stress-ng: info:  [3143] metrics untrustworthy: 0
+stress-ng: info:  [3143] successful run completed in 10,00 secs
+
+~ 10s
+❯
+  stress-ng --sem 2 -t 10 --perf --metrics-brief
+stress-ng: info:  [3189] setting to a 10 secs run per stressor
+stress-ng: info:  [3189] dispatching hogs: 2 sem
+stress-ng: metrc: [3189] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3189]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3189] sem            58365286     10.00     15.98     24.02   5836717.09     1459285.48
+stress-ng: info:  [3189] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3189] skipped: 0
+stress-ng: info:  [3189] passed: 2: sem (2)
+stress-ng: info:  [3189] failed: 0
+stress-ng: info:  [3189] metrics untrustworthy: 0
+stress-ng: info:  [3189] successful run completed in 10,00 secs
+
+~ 10s
+❯
+
+
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3453] setting to a 10 secs run per stressor
+stress-ng: info:  [3453] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3454] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3453] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3453]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3453] io               215288     10.00      0.49     10.14     21530.49       20264.74
+stress-ng: metrc: [3453] vm               610304     10.00      8.95      1.03     61029.98       61146.33
+stress-ng: info:  [3453] skipped: 0
+stress-ng: info:  [3453] passed: 3: io (2) vm (1)
+stress-ng: info:  [3453] failed: 0
+stress-ng: info:  [3453] metrics untrustworthy: 0
+stress-ng: info:  [3453] successful run completed in 10.00 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3490] setting to a 10 secs run per stressor
+stress-ng: info:  [3490] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3491] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3490] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3490]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3490] io               380001     10.00      0.84     17.72     38003.29       20478.42
+stress-ng: metrc: [3490] vm               348160     10.00      8.08      1.91     34813.29       34871.12
+stress-ng: info:  [3490] skipped: 0
+stress-ng: info:  [3490] passed: 3: io (2) vm (1)
+stress-ng: info:  [3490] failed: 0
+stress-ng: info:  [3490] metrics untrustworthy: 0
+stress-ng: info:  [3490] successful run completed in 10.00 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3533] setting to a 10 secs run per stressor
+stress-ng: info:  [3533] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3534] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3533] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3533]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3533] io               403714     10.00      0.98     17.86     40372.26       21430.31
+stress-ng: metrc: [3533] vm               610304     10.00      9.09      0.90     61034.26       61060.52
+stress-ng: info:  [3533] skipped: 0
+stress-ng: info:  [3533] passed: 3: io (2) vm (1)
+stress-ng: info:  [3533] failed: 0
+stress-ng: info:  [3533] metrics untrustworthy: 0
+stress-ng: info:  [3533] successful run completed in 10.00 secs
+
+~ 10s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3568] setting to a 10 secs run per stressor
+stress-ng: info:  [3568] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3570] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3568] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3568]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3568] io               391778      9.99      0.95     17.54     39199.33       21189.67
+stress-ng: metrc: [3568] vm               307200     15.10      0.00      0.10     20345.57     3083532.41
+stress-ng: info:  [3568] skipped: 0
+stress-ng: info:  [3568] passed: 3: io (2) vm (1)
+stress-ng: info:  [3568] failed: 0
+stress-ng: info:  [3568] metrics untrustworthy: 0
+stress-ng: info:  [3568] successful run completed in 15.11 secs
+
+~ 15s
+❯ stress-ng --io 2 --vm 1 --vm-bytes 1G --timeout 10s --metrics-brief
+stress-ng: info:  [3613] setting to a 10 secs run per stressor
+stress-ng: info:  [3613] dispatching hogs: 2 io, 1 vm
+stress-ng: info:  [3615] io: this is a legacy I/O sync stressor, consider using iomix instead
+stress-ng: metrc: [3613] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3613]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3613] io               373887     10.00      0.85     17.84     37391.60       20009.32
+stress-ng: metrc: [3613] vm               393591     10.00      8.22      1.75     39353.01       39480.57
+stress-ng: info:  [3613] skipped: 0
+stress-ng: info:  [3613] passed: 3: io (2) vm (1)
+stress-ng: info:  [3613] failed: 0
+stress-ng: info:  [3613] metrics untrustworthy: 0
+stress-ng: info:  [3613] successful run completed in 10.01 secs
+
+~ 10s
+❯
+
+
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [3800] setting to a 10 secs run per stressor
+stress-ng: info:  [3800] dispatching hogs: 50 io-uring
+stress-ng: metrc: [3800] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3800]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3800] io-uring        3666863      8.70      1.46     76.37    421466.71       47118.20
+stress-ng: info:  [3800] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [3800] skipped: 0
+stress-ng: info:  [3800] passed: 50: io-uring (50)
+stress-ng: info:  [3800] failed: 0
+stress-ng: info:  [3800] metrics untrustworthy: 0
+stress-ng: info:  [3800] successful run completed in 15,01 secs
+
+~ 15s
+❯ stress-ng --io-uring 50 -t 10 --perf --metrics-brief
+stress-ng: info:  [4753] setting to a 10 secs run per stressor
+stress-ng: info:  [4753] dispatching hogs: 50 io-uring
+stress-ng: metrc: [4753] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [4753]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [4753] io-uring        3397469      7.91      1.27     68.47    429493.73       48715.87
+stress-ng: info:  [4753] Cannot read perf counters, do not have CAP_SYS_ADMIN capability or /proc/sys/kernel/perf_event_paranoid is set too high (2)
+stress-ng: info:  [4753] skipped: 0
+stress-ng: info:  [4753] passed: 50: io-uring (50)
+stress-ng: info:  [4753] failed: 0
+stress-ng: info:  [4753] metrics untrustworthy: 0
+stress-ng: info:  [4753] successful run completed in 15,82 secs
+
+
