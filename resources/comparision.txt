@@ -1,0 +1,41 @@
+ECHO 
+
+idle CPU temp: 28°C-30°C
+
+Speedometer 3: 6.21 
+
+hackbench -l 10000 : 69.004
+
+stress-ng --cpu 6 --timeout 60s --metrics-brief
+stress-ng: info:  [4664] setting to a 1 min, 0 secs run per stressor
+stress-ng: info:  [4664] dispatching hogs: 6 cpu
+stress-ng: metrc: [4664] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [4664]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [4664] cpu              246975     60.00    359.39      0.02      4116.05         687.17
+stress-ng: info:  [4664] skipped: 0
+stress-ng: info:  [4664] passed: 6: cpu (6)
+stress-ng: info:  [4664] failed: 0
+stress-ng: info:  [4664] metrics untrustworthy: 0
+stress-ng: info:  [4664] successful run completed in 1 min, 0.01 secs
+
+
+BORE 5.0.1
+
+idle CPU temp: 14°C-15°C
+
+Speedometer 3: 6.36
+
+hackbench -l 10000: 17.270
+
+stress-ng --cpu 6 --timeout 60s --metrics-brief
+stress-ng: info:  [1641] setting to a 1 min, 0 secs run per stressor
+stress-ng: info:  [1641] dispatching hogs: 6 cpu
+stress-ng: metrc: [1641] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [1641]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [1641] cpu              244862     60.00    359.06      0.02      4080.70         681.92
+stress-ng: info:  [1641] skipped: 0
+stress-ng: info:  [1641] passed: 6: cpu (6)
+stress-ng: info:  [1641] failed: 0
+stress-ng: info:  [1641] metrics untrustworthy: 0
+stress-ng: info:  [1641] successful run completed in 1 min, 0.01 secs
+
