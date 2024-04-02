@@ -120,3 +120,18 @@ jitterdebugger to measure wake up latency
 
 https://defuse.ca/b/KUFRK8xl
 
+### By Hamad Al Marri
+
+[WebGL - default](resources/hamad-webgl-default.mp4)
+
+[WebGL - echo](resources/hamad-webgl-echo.mp4)
+
+*Note: The default linux scheduler shows more FPS
+and while running the test the motion was smooth, however
+the OBS recording frame rate has went down in the favour of the web page render.
+In the other hand, ECHO was able to fairly distribute the CPU time between all tasks
+and the motion was smooth while testing as well as the OBS recording in which the
+webGL frame rate was lower than default scheduler but that is normal because all running
+tasks had enough CPU time to work togather. In the default scheduler since OBS didn't have
+enough CPU time, its frame rate went down which even gives more CPU time to the WebGL. The final findings
+is that ECHO is more fair and smoother.*
