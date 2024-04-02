@@ -118,7 +118,7 @@ jitterdebugger to measure wake up latency
 
 ### By Notyou-Drbiguint (@Drbiguintyohaparfum)
 
-https://defuse.ca/b/KUFRK8xl
+[default vs bore vs echo](resources/tests.txt)
 
 ### By Hamad Al Marri
 
