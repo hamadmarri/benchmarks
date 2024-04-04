@@ -97,6 +97,8 @@ all function without noticing the cpu and gpu full utilization in the background
 
 ### By Mr. Error (@RiverOnVenus)
 
+[My opinion on Linux CPU scheduler](https://zhui.dev/2022-11/linux-cpu-schedulers)
+
 jitterdebugger to measure wake up latency
 
 ![arch vanilla kernel 6.8.1](resources/mr.default1.jpg)
