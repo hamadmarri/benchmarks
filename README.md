@@ -140,3 +140,10 @@ is that ECHO is more fair and smoother.*
 
 
 [phoronix-test-suite](https://openbenchmarking.org/result/2404043-NE-DEFAULTVS48)
+
+
+### Shared by @marioroy
+
+[A Clear Linux user tried my ClearMod repository and compared the Vanilla native kernel (no preemption) and ECHO (XanMod + preemption + ECHO).](https://community.clearlinux.org/t/nvidia-and-xanmod-cl-updates/9299/32)
+
+[I completed testing a demo for the phmap author. Yet, another surprise. :-)](https://github.com/hamadmarri/ECHO-CPU-Scheduler/issues/3#issuecomment-2043744632)
